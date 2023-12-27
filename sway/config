@@ -2,7 +2,7 @@ set $mod Mod4
 
 default_border pixel 4
 floating_modifier $mod normal
-font pango:FiraCode Nerd Font 13
+font pango:RobotoMono Nerd Font 13
 set $opacity 1.0
 
 set $left h
@@ -49,7 +49,7 @@ bindsym $mod+n exec neovide
 bindsym $mod+x exec mocp -G
 bindsym $mod+c exec mocp -r
 bindsym $mod+v exec mocp -f
-exec_always --no-startup-id wlsunset -l 24.5 -L 73.7
+exec_always wlsunset -l 24.5 -L 73.7
 include base16-default-dark-color-scheme
 # Autostart Applications
 exec_always --no-startup-id redshift -l 24.571270:73.691544
