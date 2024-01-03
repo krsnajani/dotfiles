@@ -8,11 +8,27 @@
   (package-install 'use-package))
 
 ;; Download Evil
+;;(set-frame-parameter nil 'fullscreen 'fullboth)
 
 (use-package doom-themes
   :ensure t
   :config
   (load-theme 'modus-vivendi t))
+
+(defun my-update-active-mode-line-colors ()
+ (set-face-attribute
+   'mode-line nil
+   :foreground (modus-themes-get-color-value 'fg-mode-line-active)
+   :background (modus-themes-get-color-value 'bg-blue-subtle)
+   :box '(:line-width
+          1
+          :color
+          (modus-themes-get-color-value 'border-mode-line-active))))
+
+(use-package modus-themes
+  :hook
+  (modus-themes-after-load-theme . my-update-active-mode-line-colors))
+
 
 (global-set-key (kbd "<f6>") 'modus-themes-toggle)
 
@@ -38,7 +54,9 @@
           "https://planet.emacslife.com/atom.xml"
 	  "https://rss.sciencedirect.com/publication/science/01674048"
 	  "https://onlinelibrary.wiley.com/feed/17459125/most-recent"
-	  "https://ieeexplore.ieee.org/rss/TOC7886829.XML"))
+	  "https://ieeexplore.ieee.org/rss/TOC7886829.XML"
+	  "https://partiallyexaminedlife.libsyn.com/rss"
+	  "https://dailynous.com/feed"))
   :bind
   ("C-x w" . 'elfeed))
 
@@ -99,14 +117,14 @@
 
 (set-face-attribute 'default nil
  :font "IBM Plex Mono"
-  :height 130)
+  :height 140)
 (set-face-attribute 'variable-pitch nil
   :font "IBM Plex Serif"
-  :height 130
+  :height 140
   :weight 'medium)
 (set-face-attribute 'fixed-pitch nil
   :font "IBM Plex Mono"
-  :height 130)
+  :height 140)
 ;; Makes commented text and keywords italics.
 ;; This is working in emacsclient but not emacs.
 ;; Your font must have an italic face available.
@@ -136,10 +154,19 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(make-backup-files nil)
+ '(org-agenda-files
+   '("/home/krishna/docs/Working Memory.org"
+     "/home/krishna/docs/Agenda.org"))
  '(package-selected-packages
    '(all-the-icons auctex-latexmk auto-dictionary consult denote
 		   doom-modeline doom-themes elfeed embark
 		   embark-consult magit marginalia nyan-mode
 		   org-modern pdf-tools rainbow-mode selectrum
-		   spacious-padding standard-themes typing-game typit
-		   vertico vterm zotxt)))
+		   spacious-padding standard-themes tmr typing-game
+		   typit vertico vterm weblorg zotxt)))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )

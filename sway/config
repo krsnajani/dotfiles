@@ -9,6 +9,7 @@ set $left h
 set $down j
 set $up k
 set $right l
+set $browser firefox
 
 bindsym $mod+Return exec foot
 bindsym $mod+q kill
@@ -45,10 +46,9 @@ bindsym $mod+Shift+0 move container to workspace number 10
 bindsym $mod+s floating toggle
 bindsym $mod+f fullscreen
 bindsym $mod+e exec emacsclient -c
-bindsym $mod+n exec neovide
-bindsym $mod+x exec mocp -G
-bindsym $mod+c exec mocp -r
-bindsym $mod+v exec mocp -f
+bindsym $mod+w exec firefox
+bindsym $mod+t exec thunar
+
 exec_always wlsunset -l 24.5 -L 73.7
 include base16-default-dark-color-scheme
 # Autostart Applications
