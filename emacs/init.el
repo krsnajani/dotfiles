@@ -155,8 +155,8 @@
  ;; If there is more than one, they won't work right.
  '(make-backup-files nil)
  '(org-agenda-files
-   '("/home/krishna/docs/Working Memory.org"
-     "/home/krishna/docs/Agenda.org"))
+   '("/home/krishna/git/notes/Working Memory.org"
+     "/home/krishna/git/notes/Agenda.org"))
  '(package-selected-packages
    '(all-the-icons auctex-latexmk auto-dictionary consult denote
 		   doom-modeline doom-themes elfeed embark

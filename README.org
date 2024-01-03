@@ -1,0 +1,18 @@
+#+title: README
+#+author: Seervai
+
+* The Dots Repo
+One of the most important part of every GNU/Linux users life is their dotfiles. This is where I choose to store them. I also encourage utilising them in your setups if you find something cool or interesting implemented here. It is very cool to see poeple use and improve on the stuff one builds.
+
+* What can you expect
+I am heavy Emacs user. This is also why I maintain a short list of dotfiles. Alot of my daily functionality is covered within Emacs. Some of these are also from the days when I heavily used "minimal" CLI based programs (Suckless Software) like my Zathura config (alot of which is also taken from Luke Smith's voidrice (https://github.com/lukesmithxyz/voidrice)).
+
+List of Programmes I maintain dotfiles for are
+- Alacritty = A GPU accelerated terminal programme
+- Foot = A handy wayland based terminal programme (daily driver)
+- i3wm = An X11 Window Manager
+- Sway = The i3 clone for the Wayland Protocol
+- Lf =  A slick command line file manager written in Go
+- OneDrive = A programme for syncing OneDrive files
+- Emacs = The Worlds Best Operating System that has an okay editor
+- Zathura = A vim-keys based minimal pdf viewer (I use pdf-tools on Emacs or a much more powerfull pdf viewer called Sioyek)
