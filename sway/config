@@ -2,7 +2,7 @@ set $mod Mod4
 
 default_border pixel 4
 floating_modifier $mod normal
-font pango:RobotoMono Nerd Font 13
+font pango:Fira Code 13
 set $opacity 1.0
 
 set $left h
@@ -45,6 +45,8 @@ bindsym $mod+Shift+9 move container to workspace number 9
 bindsym $mod+Shift+0 move container to workspace number 10
 bindsym $mod+s floating toggle
 bindsym $mod+f fullscreen
+bindsym $mod+v split v
+bindsym $mod+b split h
 bindsym $mod+e exec emacsclient -c
 bindsym $mod+w exec firefox
 bindsym $mod+t exec thunar
@@ -67,7 +69,7 @@ input * xkb_options ctrl:nocaps
 for_window [class="^.*"] opacity $opacity
 for_window [app_id="^.*"] opacity $opacity
 
-output eDP-1 bg "~/Downloads/think2.png" fill
+output eDP-1 bg "~/wall" fill
 gaps inner 5
 gaps outer 5
 
@@ -78,14 +80,14 @@ bar {
 	position top
 
 colors {
-    background $base01
+    background $base00
     separator  $base03
-    statusline $base04
+    statusline $base07
 
     # State             Border  BG      Text
-    focused_workspace   $base05 $base0C $base00
-    active_workspace    $base05 $base06 $base00
-    inactive_workspace  $base03 $base01 $base05
+    focused_workspace   $base02 $base03 $base07
+    active_workspace    $base05 $base00 $base04
+    inactive_workspace  $base03 $base00 $base07
     urgent_workspace    $base08 $base08 $base00
     binding_mode        $base00 $base0A $base00
 }
