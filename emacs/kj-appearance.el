@@ -13,7 +13,7 @@
 (use-package doom-themes
   :ensure t
   :config
-  (load-theme 'doom-zenburn t))
+  (load-theme 'modus-vivendi t))
 
 ;; Although modus themes are now default in Emacs, there are certain modus variants that are not part of the default package
 
