@@ -19,7 +19,7 @@
 (use-package ef-themes
   :ensure t
   :config
-  (load-theme 'ef-kassio t))
+  (load-theme 'ef-maris-light t))
   
 
 ;; The lighting suits the theme so allows for frequent changes
@@ -31,7 +31,7 @@
 		    :font "Inconsolata Nerd Font"
 		    :height 130)
 (set-face-attribute 'variable-pitch nil
-		    :font "Cambria"
+		    :font "Georgia"
 		    :height 140)
 (set-face-attribute 'fixed-pitch nil
 		    :font "Consolas"

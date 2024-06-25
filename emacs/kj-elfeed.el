@@ -8,12 +8,6 @@
 	  ("https://feeds.npr.org/1001/rss.xml" news)
 	  )))
 
-(use-package elfeed-org
-  :ensure t
-  :after elfeed
-  :config
-  (elfeed-org)
-  )
 
 (use-package elfeed-goodies
   :ensure t

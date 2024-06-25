@@ -28,22 +28,26 @@
 (customize-set-variable 'ispell-program-name "aspell")
 (customize-set-variable 'ispell-extra-args '("--sug-mode=ultra"))
 
-(setq org-directory "~/docs/org")
-(global-set-key (kbd "C-c a") 'org-agenda)
-(global-set-key (kbd "C-c c") 'org-capture)
-(setq org-capture-templates
-      '(("t" "Todo" entry (file+headline "~/docs/org/capture.org" "Tasks")
-         "** TODO %?\n  %i\n  %a")
-	
-	("s" "Scheduled Time Blocks" entry (file+headline "~/docs/org/schedule.org" "Time Blocks")
-	 "** Work On : %?\n SCHEDULED: %T\n")
+(use-package org
+  :ensure t
+  :config
 
-	("a" "Assignment Entry" entry (file+headline "~/docs/org/memory.org" "Assignments")
-	 "** %?\n Subject : %?\n DEADLINE:%T\n")
+  (setq org-directory "~/docs/org")
+  (global-set-key (kbd "C-c a") 'org-agenda)
+  (global-set-key (kbd "C-c c") 'org-capture)
+  (setq org-capture-templates
+	'(("t" "Todo" entry (file+headline "~/docs/org/capture.org" "Tasks")
+           "** TODO %?\n  %i\n  %a")
+	  
+	  ("s" "Scheduled Time Blocks" entry (file+headline "~/docs/org/schedule.org" "Time Blocks")
+	   "** Work On : %?\n SCHEDULED: %T\n")
 
-	("c" "Cool New Thing" entry (file "~/docs/org/archive.org"))
+	  ("a" "Assignment Entry" entry (file+headline "~/docs/org/memory.org" "Assignments")
+	   "** %?\n Subject : %?\n DEADLINE:%T\n")
 
-	))
+	  ("c" "Cool New Thing" entry (file "~/docs/org/archive.org"))
+
+	  )))
 
 ;; Todo
 ;; Assignments

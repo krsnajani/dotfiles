@@ -1,0 +1,3 @@
+[submodule "emacs-git"]
+	path = emacs-git
+	url = https://aur.archlinux.org/emacs-git

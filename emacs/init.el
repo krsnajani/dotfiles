@@ -9,9 +9,11 @@
 
 ;; Configs
 (load-file "~/.config/emacs/kj-appearance.el") ;; Themes, fonts etc
+(load-file "~/.config/emacs/kj-elfeed.el") ;; Themes, fonts etc
 (load-file "~/.config/emacs/kj-denote.el") ;; The Denote Note Taking Package
 (load-file "~/.config/emacs/kj-org.el") ;; Org mode and text mode changes
 (load-file "~/.config/emacs/lisp/kj-rmail.el") ;; Mail changes
+
 
 
 (use-package pdf-tools
@@ -60,7 +62,7 @@
  '(org-cite-csl-styles-dir "/home/krishnaj/Zotero/styles")
  '(org-cite-global-bibliography '("~/docs/Library.bib"))
  '(package-selected-packages
-   '(listen ef-themes elfeed-tube-mpv elfeed-goodies elfeed-tube elfeed-org visual-fill-column visual-fill modus-themes evil-leader treemacs speed-type evil-collection hackernews dashboard-hackernews dashboard citeproc-org citar consult-notes citar-denote obsidian ewal-evil-cursors ewal-doom-themes sudo-edit olivetti markdown-mode all-the-icons auctex-latexmk auto-dictionary consult denote doom-modeline doom-themes elfeed embark embark-consult magit marginalia nyan-mode org-modern pdf-tools rainbow-mode selectrum spacious-padding standard-themes tmr typing-game typit vertico vterm weblorg zotxt)))
+   '(org oauth2-auto listen ef-themes elfeed-tube-mpv elfeed-goodies elfeed-tube elfeed-org visual-fill-column visual-fill modus-themes evil-leader treemacs speed-type evil-collection hackernews dashboard-hackernews dashboard citeproc-org citar consult-notes citar-denote obsidian ewal-evil-cursors ewal-doom-themes sudo-edit olivetti markdown-mode all-the-icons auctex-latexmk auto-dictionary consult denote doom-modeline doom-themes elfeed embark embark-consult magit marginalia nyan-mode org-modern pdf-tools rainbow-mode selectrum spacious-padding standard-themes tmr typing-game typit vertico vterm weblorg zotxt)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
