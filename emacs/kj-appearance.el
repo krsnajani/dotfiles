@@ -28,7 +28,7 @@
 
 ;; Simple font configuration
 (set-face-attribute 'default nil
-		    :font "Inconsolata Nerd Font"
+		    :font "Iosevka Comfy"
 		    :height 130)
 (set-face-attribute 'variable-pitch nil
 		    :font "Georgia"

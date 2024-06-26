@@ -19,7 +19,8 @@
 			     (setq org-hide-emphasis-markers t)
 			     (org-modern-mode)
 			     (org-indent-mode)
-			     (my-org-faces)))
+			     (my-org-faces)
+			     (variable-pitch-mode)))
 
 (add-hook 'olivetti-mode-on-hook (lambda ()
 				   (visual-line-mode)
@@ -38,15 +39,13 @@
   (setq org-capture-templates
 	'(("t" "Todo" entry (file+headline "~/docs/org/capture.org" "Tasks")
            "** TODO %?\n  %i\n  %a")
-	  
 	  ("s" "Scheduled Time Blocks" entry (file+headline "~/docs/org/schedule.org" "Time Blocks")
 	   "** Work On : %?\n SCHEDULED: %T\n")
-
+	  ("e" "Event" entry (file+headline "~/docs/org/schedule.org" "Events")
+	   "** %?\n SCHEDULED: %T\n %a")
 	  ("a" "Assignment Entry" entry (file+headline "~/docs/org/memory.org" "Assignments")
 	   "** %?\n Subject : %?\n DEADLINE:%T\n")
-
 	  ("c" "Cool New Thing" entry (file "~/docs/org/archive.org"))
-
 	  )))
 
 ;; Todo
