@@ -48,6 +48,21 @@
 	  ("c" "Cool New Thing" entry (file "~/docs/org/archive.org"))
 	  )))
 
+(use-package org-caldav
+  :ensure t
+  :config
+  (setq org-caldav-url "https://posteo.de:8443/calendars/krishnajani/")
+  (setq org-caldav-calendar-id "default")
+  (setq org-caldav-inbox "~/docs/org/schedule.org")
+  (setq org-caldav-files '("~/docs/org/memory.org"))
+  (setq org-icalendar-timezone "Asia/Kolkata")
+  (setq org-icalendar-include-todo 'all
+	org-caldav-sync-todo t
+	org-icalendar-use-deadline '(event-if-todo event-if-not-todo todo-due)
+	org-icalendar-use-scheduled '(event-if-todo event-if-not-todo todo-start)
+	org-icalendar-with-timestamps t)
+  )
+
 ;; Todo
 ;; Assignments
 ;; Time Blocks

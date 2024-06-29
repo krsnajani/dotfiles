@@ -19,11 +19,11 @@
 (use-package ef-themes
   :ensure t
   :config
-  (load-theme 'ef-maris-light t))
+  (load-theme 'ef-cherie t)
+  (global-set-key (kbd "<f6>") 'ef-themes-toggle))
   
 
 ;; The lighting suits the theme so allows for frequent changes
-(global-set-key (kbd "<f6>") 'modus-themes-toggle)
 
 
 ;; Simple font configuration
