@@ -10,7 +10,7 @@
 
 ;; Installing Themes
 
-(use-package doom-themes
+(use-package acme-theme
   :ensure t)
   ;(load-theme 'modus-vivendi t))
 
@@ -19,7 +19,7 @@
 (use-package ef-themes
   :ensure t
   :config
-  (load-theme 'ef-cherie t)
+  (load-theme 'acme t)
   (global-set-key (kbd "<f6>") 'ef-themes-toggle))
   
 

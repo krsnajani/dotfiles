@@ -68,8 +68,9 @@
      "https://www.youtube.com/feeds/videos.xml?channel_id=UCXuqSBlHAE6Xw-yeJA0Tunw"
      "https://www.youtube.com/feeds/videos.xml?channel_id=UCafEZMU5s8geb9oIly6xTrg"
      "https://www.youtube.com/feeds/videos.xml?channel_id=UCQjBsscIa_mgEnSvWpm_9vw"
-     "https://planet.emacslife.com/atom.xml emacs"
-     "https://lobste.rs/rss" "https://feeds.npr.org/1001/rss.xml"))
+     "https://planet.emacslife.com/atom.xml" "https://lobste.rs/rss"
+     "https://feeds.npr.org/1001/rss.xml"))
+ '(elfeed-tube-mpv-options '("--cache=yes" "--force-window=yes" "--profile=720p"))
  '(evil-want-keybinding nil)
  '(make-backup-files nil)
  '(org-agenda-files
@@ -79,20 +80,20 @@
  '(org-cite-csl-styles-dir "/home/krishnaj/Zotero/styles")
  '(org-cite-global-bibliography '("~/docs/Library.bib"))
  '(package-selected-packages
-   '(all-the-icons auctex-latexmk auto-dictionary citar citar-denote
-		   citeproc-org consult consult-notes dashboard
-		   dashboard-hackernews denote doom-modeline
-		   doom-themes ef-themes elfeed elfeed-goodies
-		   elfeed-org elfeed-tube elfeed-tube-mpv embark
-		   embark-consult ement evil-collection evil-leader
-		   ewal-doom-themes ewal-evil-cursors hackernews
-		   listen magit marginalia markdown-mode modus-themes
-		   mw-thesaurus nyan-mode oauth2-auto obsidian
-		   olivetti orderless org org-caldav org-modern
-		   pdf-tools rainbow-mode selectrum spacious-padding
-		   speed-type standard-themes sudo-edit tmr treemacs
-		   typing-game typit vertico visual-fill
-		   visual-fill-column vterm weblorg zotxt)))
+   '(acme-theme all-the-icons auctex-latexmk auto-dictionary citar
+		citar-denote citeproc-org consult consult-notes
+		dashboard dashboard-hackernews denote doom-modeline
+		doom-themes ef-themes elfeed elfeed-goodies elfeed-org
+		elfeed-tube elfeed-tube-mpv embark embark-consult
+		ement evil-collection evil-leader ewal-doom-themes
+		ewal-evil-cursors hackernews listen magit marginalia
+		markdown-mode modus-themes mw-thesaurus nyan-mode
+		oauth2-auto obsidian olivetti orderless org org-caldav
+		org-modern pdf-tools plan9-theme rainbow-mode
+		selectrum solo-jazz-theme spacious-padding speed-type
+		standard-themes sudo-edit tmr treemacs
+		twilight-bright-theme typing-game typit vertico
+		visual-fill visual-fill-column vterm weblorg zotxt)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
