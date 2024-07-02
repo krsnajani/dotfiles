@@ -24,7 +24,7 @@
 
 (add-hook 'olivetti-mode-on-hook (lambda ()
 				   (visual-line-mode)
-				   (olivetti-set-width 90)))
+				   (olivetti-set-width 120)))
 
 (customize-set-variable 'ispell-program-name "aspell")
 (customize-set-variable 'ispell-extra-args '("--sug-mode=ultra"))
