@@ -1,19 +1,20 @@
 
 (use-package elfeed
   :ensure t
-  :config
-  (setq elfeed-feeds
-	'(("https://planet.emacslife.com/atom.xml" emacs)
-	  ("https://lobste.rs/rss" tech news)
-	  ("https://feeds.npr.org/1001/rss.xml" news)
-	  )))
-
+ )
 
 (use-package elfeed-goodies
   :ensure t
   :after elfeed
+ )
+;  (elfeed-goodies/setup))
+
+(use-package elfeed-org
+  :ensure t
+  :after elfeed
   :config
-  (elfeed-goodies/setup))
+  (setq rmh-elfeed-org-files (list "~/docs/org/elfeed.org"))
+  (elfeed-org))
 
 (use-package elfeed-tube
   :ensure t

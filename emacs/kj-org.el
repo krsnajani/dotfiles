@@ -46,6 +46,11 @@
 	  ("a" "Assignment Entry" entry (file+headline "~/docs/org/memory.org" "Assignments")
 	   "** %?\n Subject : %?\n DEADLINE:%T\n")
 	  ("c" "Cool New Thing" entry (file "~/docs/org/archive.org"))
+	  ("r" "Read It Later" entry (file "~/docs/org/read-later.org"))
+	  ("L" "org-capture websites" entry (file "~/docs/org/archive.org")
+	   "* %^{Title}\n\n  Source: %u, %c\n\n  %i")
+	  ("p" "org-capture text from websites" entry (file "~/docs/org/archive.org")
+	   "* %^{Title}\n\n  Source: %u, %c\n\n  %i")
 	  )))
 
 (use-package org-caldav
