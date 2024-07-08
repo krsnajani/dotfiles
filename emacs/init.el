@@ -8,6 +8,7 @@
 
 
 ;; Configs
+
 (load-file "~/.config/emacs/kj-appearance.el") ;; Themes, fonts etc
 (load-file "~/.config/emacs/kj-elfeed.el") ;; Themes, fonts etc
 (load-file "~/.config/emacs/kj-denote.el") ;; The Denote Note Taking Package
@@ -32,9 +33,10 @@
   ("C-c s" . 'consult-line)
   ("C-c f" . 'consult-find))
 
-(fido-mode)
-(fido-vertical-mode)
-
+(use-package vertico
+  :ensure t
+  :config
+  (vertico-mode 1))
 
 (use-package marginalia
   :ensure t
