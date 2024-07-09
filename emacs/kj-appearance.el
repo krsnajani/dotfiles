@@ -19,7 +19,7 @@
 (use-package ef-themes
   :ensure t
   :config
-  (load-theme 'acme t)
+ ;; (load-theme 'acme t)
   (global-set-key (kbd "<f6>") 'ef-themes-toggle))
   
 

@@ -47,6 +47,11 @@
   :ensure t
   ) 
 
+(use-package embark
+  :ensure t
+  :bind
+  ("C-." . 'embark-act))
+
 (setq-default line-spacing 0.15)
 
 (custom-set-variables
