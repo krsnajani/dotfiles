@@ -13,7 +13,7 @@
 (load-file "~/.config/emacs/kj-elfeed.el") ;; Themes, fonts etc
 (load-file "~/.config/emacs/kj-denote.el") ;; The Denote Note Taking Package
 (load-file "~/.config/emacs/kj-org.el") ;; Org mode and text mode changes
-(load-file "~/.config/emacs/lisp/kj-rmail.el") ;; Mail changes
+;(load-file "~/.config/emacs/lisp/kj-rmail.el") ;; Mail changes
 
 (server-start)
 (require 'org-protocol)

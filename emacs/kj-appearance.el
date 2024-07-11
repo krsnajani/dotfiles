@@ -11,8 +11,9 @@
 ;; Installing Themes
 
 (use-package acme-theme
-  :ensure t)
-  ;(load-theme 'modus-vivendi t))
+  :ensure t
+  :config
+  (load-theme 'modus-vivendi t))
 
 ;; Although modus themes are now default in Emacs, there are certain modus variants that are not part of the default package
 
