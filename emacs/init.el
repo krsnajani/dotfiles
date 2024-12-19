@@ -72,22 +72,10 @@
  '(org-cite-csl-styles-dir "/home/krishnaj/Zotero/styles")
  '(org-cite-global-bibliography '("~/docs/Library.bib"))
  '(package-selected-packages
-   '(acme-theme all-the-icons auctex-latexmk auto-dictionary citar
-		citar-denote citeproc-org consult consult-denote
-		consult-notes dashboard dashboard-hackernews denote
-		doom-modeline doom-themes ef-themes elfeed
-		elfeed-goodies elfeed-org elfeed-tube elfeed-tube-mpv
-		embark embark-consult ement evil-collection
-		evil-leader ewal-doom-themes ewal-evil-cursors
-		hackernews listen magit marginalia markdown-mode
-		modus-themes mw-thesaurus nano-theme nyan-mode
-		oauth2-auto obsidian olivetti orderless org org-caldav
-		org-contrib org-modern ox-hugo pdf-tools plan9-theme
-		rainbow-mode selectrum solo-jazz-theme
-		spacious-padding speed-type standard-themes sudo-edit
-		tmr treemacs twilight-bright-theme typing-game typit
-		vertico visual-fill visual-fill-column vterm weblorg
-		zotxt)))
+   '(acme-theme consult-notes denote ef-themes elfeed-goodies elfeed-org
+		elfeed-tube embark magit marginalia olivetti
+		org-caldav org-modern org-roam pdf-tools plan9-theme
+		vertico)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.

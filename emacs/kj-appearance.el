@@ -13,7 +13,7 @@
 (use-package acme-theme
   :ensure t
   :config
-  (load-theme 'modus-vivendi t))
+  (load-theme 'acme t))
 
 ;; Although modus themes are now default in Emacs, there are certain modus variants that are not part of the default package
 
@@ -29,14 +29,14 @@
 
 ;; Simple font configuration
 (set-face-attribute 'default nil
-		    :font "Iosevka Comfy"
+		    :font "FantasqueSansM Nerd Font"
 		    :height 130)
 (set-face-attribute 'variable-pitch nil
-		    :font "Georgia"
-		    :height 140)
+		    :font "FantasqueSansM Nerd Font"
+		    :height 150)
 (set-face-attribute 'fixed-pitch nil
-		    :font "Consolas"
-		    :height 140)
+		    :font "FantasqueSansM Nerd Font"
+		    :height 130)
 
 ;; Makes commented text and keywords italics.
 (set-face-attribute 'font-lock-comment-face nil

@@ -5,6 +5,10 @@
   :ensure t
   )
 
+(use-package olivetti
+  :ensure t
+  )
+
 (defun my-org-faces ()
   (set-face-attribute 'org-todo nil :height 0.8)
   (set-face-attribute 'org-level-1 nil :height 1.2)
@@ -19,8 +23,8 @@
 			     (setq org-hide-emphasis-markers t)
 			     (org-modern-mode)
 			     (org-indent-mode)
-			     (my-org-faces)
-			     (variable-pitch-mode)))
+			     (variable-pitch-mode)
+			     (my-org-faces)))
 
 (add-hook 'olivetti-mode-on-hook (lambda ()
 				   (visual-line-mode)
@@ -67,6 +71,19 @@
 	org-icalendar-use-scheduled '(event-if-todo event-if-not-todo todo-start)
 	org-icalendar-with-timestamps t)
   )
+
+
+(use-package org-roam
+  :ensure t
+  :custom
+  (org-roam-directory "~/docs/org/roam")
+  :bind (("C-c n l" . org-roam-buffer-toggle)
+         ("C-c n f" . org-roam-node-find)
+         ("C-c n i" . org-roam-node-insert))
+  :config
+  (org-roam-setup))
+
+
 
 ;; Todo
 ;; Assignments

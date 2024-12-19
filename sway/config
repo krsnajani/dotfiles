@@ -9,7 +9,8 @@ set $left h
 set $down j
 set $up k
 set $right l
-set $browser firefox
+set $browser chromium
+set $filemgr thunar
 
 bindsym $mod+Return exec foot
 bindsym $mod+q kill
@@ -48,14 +49,17 @@ bindsym $mod+f fullscreen
 bindsym $mod+v split v
 bindsym $mod+b split h
 bindsym $mod+e exec emacsclient -c
-bindsym $mod+w exec firefox
-bindsym $mod+t exec pcmanfm
+bindsym $mod+w exec $browser
+bindsym $mod+t exec $filemgr
 
-exec_always wlsunset -l 24.5 -L 73.7
 include base16-default-dark-color-scheme
 # Autostart Applications
 exec_always --no-startup-id redshift -l 24.571270:73.691544
 exec --no-startup-id autotiling
+exec_always wlsunset -l 24.5 -L 73.7
+
+# Devices Config - Input and Output
+
 input type:keyboard {
     repeat_delay 200
     repeat_rate 50
@@ -66,13 +70,13 @@ input type:touchpad {
 
 input * xkb_options ctrl:nocaps
 
-for_window [class="^.*"] opacity $opacity
-for_window [app_id="^.*"] opacity $opacity
 
+# Wallpaper and Gaps
 output eDP-1 bg "~/wall" fill
 gaps inner 5
 gaps outer 5
 
+# Status Bar and Window Decorations
 
 bar {
 	status_command i3status
