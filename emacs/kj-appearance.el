@@ -10,10 +10,10 @@
 
 ;; Installing Themes
 
-(use-package acme-theme
+(use-package modus-themes
   :ensure t
   :config
-  (load-theme 'acme t))
+  (load-theme 'modus-vivendi-tinted t))
 
 ;; Although modus themes are now default in Emacs, there are certain modus variants that are not part of the default package
 
@@ -29,13 +29,13 @@
 
 ;; Simple font configuration
 (set-face-attribute 'default nil
-		    :font "FantasqueSansM Nerd Font"
-		    :height 130)
+		    :font "SFMono Nerd Font Mono"
+		    :height 120)
 (set-face-attribute 'variable-pitch nil
-		    :font "FantasqueSansM Nerd Font"
+		    :font "SFMono Nerd Font Mono"
 		    :height 150)
 (set-face-attribute 'fixed-pitch nil
-		    :font "FantasqueSansM Nerd Font"
+		    :font "SFMono Nerd Font Mono"
 		    :height 130)
 
 ;; Makes commented text and keywords italics.

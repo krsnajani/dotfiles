@@ -71,11 +71,8 @@
      "/home/krishnaj/docs/org/schedule.org"))
  '(org-cite-csl-styles-dir "/home/krishnaj/Zotero/styles")
  '(org-cite-global-bibliography '("~/docs/Library.bib"))
- '(package-selected-packages
-   '(acme-theme consult-notes denote ef-themes elfeed-goodies elfeed-org
-		elfeed-tube embark magit marginalia olivetti
-		org-caldav org-modern org-roam pdf-tools plan9-theme
-		vertico)))
+ '(package-selected-packages nil)
+ '(select-enable-clipboard t))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.

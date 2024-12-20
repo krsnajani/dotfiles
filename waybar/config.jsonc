@@ -1,0 +1,76 @@
+{
+  "modules-left": ["hyprland/workspaces", "custom/player"],
+  "modules-center": [],
+  "modules-right": [
+    "custom/record",
+    "custom/weather",
+    "network",
+    "bluetooth",
+    "battery",
+    "custom/clock",
+    "tray"
+  ],
+
+  "hyprland/workspaces": {
+     "format": "{name}",
+  },
+  "custom/clock": {
+    "exec": "date +'%I:%M'",
+    "tooltip": false,
+    "on-click": "month",
+    "on-click-right": "events",
+    "interval": 60
+  },
+  "network": {
+    "interface": "wlp0s20f3",
+    "format": "  : {essid} ",
+    "format-disconnected": "󰖪 " 
+  },
+  "battery": {
+    "bat": "BAT0",
+    "adapter": "AC",
+    "states": {
+      "warning": 50,
+      "critical": 25
+    },
+    "format": "{icon} {capacity}%",
+    "format-charging": "<span color=\"#9ece6a\">󱐋</span> {capacity}%",
+    "format-icons": [
+      "<span color=\"#f7768e\">󰂎</span>",
+      "<span color=\"#f7768e\">󰁻</span>",
+      "<span color=\"#e0af68\">󰁾</span>",
+      "<span color=\"#9ece6a\">󰂀</span>",
+      "<span color=\"#9ece6a\">󰁹</span>"
+    ],
+    "interval": 30
+  },
+  "bluetooth": {
+    "format": "",
+    "format-off": "󰂲 OFF",
+    "format-connected-battery": "<span color=\"#2ac3de\"></span> {device_battery_percentage}%",
+    "tooltip-format": "{device_alias}",
+    "on-click": "bttoggle"
+  },
+  "custom/inbox": {
+    "format": "Inbox",
+    "tooltip": false,
+    "on-click": "foot neomutt",
+    "signal": 4
+  },
+  "custom/player": {
+    "exec": "player",
+    "tooltip": false,
+    "max-length": 50,
+    "signal": 1
+  },
+  "custom/weather": {
+    "exec": "cat $XDG_DATA_HOME/weather",
+    "tooltip": false,
+    "signal": 2
+  },
+  "custom/record": {
+    "exec": "record",
+    "tooltip": false,
+    "signal": 3
+  }
+}
