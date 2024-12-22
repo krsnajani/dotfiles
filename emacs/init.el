@@ -72,11 +72,15 @@
  '(org-cite-csl-styles-dir "/home/krishnaj/Zotero/styles")
  '(org-cite-global-bibliography '("~/docs/Library.bib"))
  '(package-selected-packages
-   '(consult-notes denote ef-themes elfeed-goodies elfeed-org elfeed-tube
-		   embark magit marginalia modus-themes olivetti
-		   org-caldav org-modern org-roam pdf-tools
-		   rainbow-mode vertico))
- '(select-enable-clipboard t))
+   '(all-the-icons all-the-icons-nerd-fonts consult-notes denote
+		   desktop-environment doom-modeline doom-themes
+		   ef-themes elfeed-goodies elfeed-org elfeed-tube
+		   embark embark-consult magit marginalia modus-themes
+		   olivetti org-caldav org-journal org-modern org-roam
+		   org-static-blog pdf-tools rainbow-mode subsonic
+		   vertico vterm weblorg))
+ '(select-enable-clipboard t)
+ '(subsonic-ssl nil))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.

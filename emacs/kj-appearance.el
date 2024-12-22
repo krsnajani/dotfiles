@@ -13,7 +13,7 @@
 (use-package modus-themes
   :ensure t
   :config
-  (load-theme 'modus-vivendi-tinted t))
+  (load-theme 'modus-vivendi t))
 
 ;; Although modus themes are now default in Emacs, there are certain modus variants that are not part of the default package
 
@@ -21,9 +21,17 @@
   :ensure t
   :config
  ;; (load-theme 'acme t)
-  (global-set-key (kbd "<f6>") 'ef-themes-toggle))
+  (global-set-key (kbd "<f6>") 'modus-themes-toggle))
   
 
+(use-package doom-themes
+  :ensure t)
+
+(use-package doom-modeline
+  :ensure
+  :config
+  (doom-modeline-mode 1)
+  (display-battery-mode 1))
 ;; The lighting suits the theme so allows for frequent changes
 
 
@@ -33,7 +41,7 @@
 		    :height 120)
 (set-face-attribute 'variable-pitch nil
 		    :font "SFMono Nerd Font Mono"
-		    :height 150)
+		    :height 120)
 (set-face-attribute 'fixed-pitch nil
 		    :font "SFMono Nerd Font Mono"
 		    :height 130)
