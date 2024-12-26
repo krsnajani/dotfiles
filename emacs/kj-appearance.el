@@ -13,7 +13,7 @@
 (use-package modus-themes
   :ensure t
   :config
-  (load-theme 'modus-vivendi t))
+  (load-theme 'kj t))
 
 ;; Although modus themes are now default in Emacs, there are certain modus variants that are not part of the default package
 
@@ -52,3 +52,15 @@
 (set-face-attribute 'font-lock-keyword-face nil
 		    :slant 'italic)
 
+(defun kj/toggle-theme ()
+  "Toggle the deeper-blue theme.
+
+URL `http://xahlee.info/emacs/emacs/elisp_xah-toggle-theme.html`
+Created: 2024-08-22
+Version: 2024-08-29"
+  (interactive)
+  (if custom-enabled-themes
+      (progn
+        (disable-theme 'deeper-blue)
+        (set-background-color "honeydew"))
+    (load-theme 'deeper-blue)))

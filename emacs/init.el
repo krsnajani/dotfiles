@@ -13,7 +13,7 @@
 (load-file "~/.config/emacs/kj-elfeed.el") ;; Themes, fonts etc
 (load-file "~/.config/emacs/kj-denote.el") ;; The Denote Note Taking Package
 (load-file "~/.config/emacs/kj-org.el") ;; Org mode and text mode changes
-;(load-file "~/.config/emacs/lisp/kj-rmail.el") ;; Mail changes
+(load-file "~/.config/emacs/miniflux.el") ;; Mail changes
 
 (server-start)
 (require 'org-protocol)
@@ -65,6 +65,8 @@
  '(elfeed-tube-mpv-options '("--cache=yes" "--force-window=yes" "--profile=720p"))
  '(evil-want-keybinding nil)
  '(make-backup-files nil)
+ '(miniflux-server "http://umbrel:2520/v1")
+ '(miniflux-token "GXx63OXAWWJx5K5WB1GcX-jxj2OnJCb8nVOXztz0g1Y=")
  '(org-agenda-files
    '("/home/krishnaj/docs/org/capture.org"
      "/home/krishnaj/docs/org/refile.org"
@@ -72,14 +74,18 @@
  '(org-cite-csl-styles-dir "/home/krishnaj/Zotero/styles")
  '(org-cite-global-bibliography '("~/docs/Library.bib"))
  '(package-selected-packages
-   '(all-the-icons all-the-icons-nerd-fonts consult-notes denote
-		   desktop-environment doom-modeline doom-themes
-		   ef-themes elfeed-goodies elfeed-org elfeed-tube
-		   embark embark-consult magit marginalia modus-themes
-		   olivetti org-caldav org-journal org-modern org-roam
-		   org-static-blog pdf-tools rainbow-mode subsonic
-		   vertico vterm weblorg))
+   '(all-the-icons all-the-icons-nerd-fonts citeproc citeproc-org
+		   consult-notes denote desktop-environment
+		   doom-modeline doom-themes ef-themes elfeed-goodies
+		   elfeed-org elfeed-tube embark embark-consult
+		   jazz-theme magit marginalia markdown-mode
+		   modus-themes olivetti org-caldav org-journal
+		   org-modern org-roam org-static-blog pdf-tools
+		   rainbow-mode subsonic sudo-edit vertico vterm
+		   weblorg))
  '(select-enable-clipboard t)
+ '(smtpmail-smtp-server "posteo.de")
+ '(smtpmail-smtp-service 587)
  '(subsonic-ssl nil))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
