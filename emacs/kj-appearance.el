@@ -13,7 +13,7 @@
 (use-package modus-themes
   :ensure t
   :config
-  (load-theme 'kj t))
+  (load-theme 'jazz t))
 
 ;; Although modus themes are now default in Emacs, there are certain modus variants that are not part of the default package
 
@@ -40,7 +40,7 @@
 		    :font "SFMono Nerd Font Mono"
 		    :height 120)
 (set-face-attribute 'variable-pitch nil
-		    :font "SFMono Nerd Font Mono"
+		    :font "Liberation Sans"
 		    :height 120)
 (set-face-attribute 'fixed-pitch nil
 		    :font "SFMono Nerd Font Mono"

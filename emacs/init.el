@@ -9,14 +9,19 @@
 
 ;; Configs
 
-(load-file "~/.config/emacs/kj-appearance.el") ;; Themes, fonts etc
-(load-file "~/.config/emacs/kj-elfeed.el") ;; Themes, fonts etc
-(load-file "~/.config/emacs/kj-denote.el") ;; The Denote Note Taking Package
+;(load-file "~/.config/emacs/kj-appearance.el") ;; Themes, fonts etc
+;(load-file "~/.config/emacs/kj-elfeed.el") ;; Themes, fonts etc
+;(load-file "~/.config/emacs/kj-denote.el") ;; The Denote Note Taking Package
 (load-file "~/.config/emacs/kj-org.el") ;; Org mode and text mode changes
-(load-file "~/.config/emacs/miniflux.el") ;; Mail changes
+;(load-file "~/.config/emacs/miniflux.el") ;; Mail changes
 
 (server-start)
 (require 'org-protocol)
+
+(use-package vterm
+  :ensure t
+ )
+
 
 (use-package pdf-tools
   :ensure t
@@ -53,6 +58,95 @@
   ("C-." . 'embark-act))
 
 (setq-default line-spacing 0.15)
+
+
+;; Generic UI Changes. Disables all GUI elements, such as toolbar, scrollbar and menubar
+
+(tool-bar-mode -1)
+(menu-bar-mode -1)
+(scroll-bar-mode -1)
+(recentf-mode)
+(visual-line-mode +1)
+
+
+;; Installing Themes
+
+(use-package modus-themes
+  :ensure t
+  :config
+  (load-theme 'jazz t))
+
+;; Although modus themes are now default in Emacs, there are certain modus variants that are not part of the default package
+
+(use-package ef-themes
+  :ensure t
+  :config
+ ;; (load-theme 'acme t)
+  (global-set-key (kbd "<f6>") 'modus-themes-toggle))
+  
+
+(use-package doom-themes
+  :ensure t)
+
+(use-package doom-modeline
+  :ensure
+  :config
+  (doom-modeline-mode 1)
+  (display-battery-mode 1))
+;; The lighting suits the theme so allows for frequent changes
+
+
+;; Simple font configuration
+(set-face-attribute 'default nil
+		    :font "SFMono Nerd Font Mono"
+		    :height 120)
+(set-face-attribute 'variable-pitch nil
+		    :font "Liberation Sans"
+		    :height 120)
+(set-face-attribute 'fixed-pitch nil
+		    :font "SFMono Nerd Font Mono"
+		    :height 130)
+
+;; Makes commented text and keywords italics.
+(set-face-attribute 'font-lock-comment-face nil
+		    :slant 'italic)
+(set-face-attribute 'font-lock-keyword-face nil
+		    :slant 'italic)
+
+(defun kj/toggle-theme ()
+  "Toggle the deeper-blue theme.
+
+URL `http://xahlee.info/emacs/emacs/elisp_xah-toggle-theme.html`
+Created: 2024-08-22
+Version: 2024-08-29"
+  (interactive)
+  (if custom-enabled-themes
+      (progn
+        (disable-theme 'deeper-blue)
+        (set-background-color "honeydew"))
+    (load-theme 'deeper-blue)))
+
+
+
+ (setq gc-cons-threshold most-positive-fixnum ; 2^61 bytes
+       gc-cons-percentage 0.6)
+ (defvar config:file-name-handler-alist-cache file-name-handler-alist)
+ (setq file-name-handler-alist nil)
+ (defun config:restore-post-init-settings ()
+   (setq gc-cons-threshold 16777216 ; 16mb
+         gc-cons-percentage 0.1)
+   (setq file-name-handler-alist config:file-name-handler-alist-cache))
+ (add-hook 'emacs-startup-hook #'config:restore-post-init-settings)
+ 
+ (defun config:defer-gc ()
+   (setq gc-cons-threshold most-positive-fixnum))
+ (defun config:-do-restore-gc ()
+   (setq gc-cons-threshold 16777216))
+ (defun config:restore-gc ()
+   (run-at-time 1 nil #'config:-do-restore-gc))
+ 
+ (add-hook 'minibuffer-setup #'config:defer-gc)
+ (add-hook 'minibuffer-exit #'config:restore-gc)
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
