@@ -109,7 +109,7 @@
   ;;   This particular HTML creates a <div> with a simple linked headline
   (setq org-static-blog-page-preamble
 	"<div class=\"header\">
-  <a href=\"https://krsnajani.github.io\">Home!</a>
+  <a href=\"https://blog.krishnaj.space\">Home!</a> <a href=\"./aboutme.html\">About Me</a>
 </div>")
 
   ;; This postamble is inserted at the end of the <body> of every page:
