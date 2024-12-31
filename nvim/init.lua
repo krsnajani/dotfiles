@@ -1,2 +1,1 @@
-require("kj.remap")
-require("kj.packer")
+set number

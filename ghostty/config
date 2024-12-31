@@ -1,0 +1,6 @@
+window-decoration=false
+font-family=SFMono Nerd Font Mono
+theme=flexoki-dark
+window-padding-x=10
+window-padding-y=10
+confirm-close-surface=false

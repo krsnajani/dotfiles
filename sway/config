@@ -12,7 +12,7 @@ set $right l
 set $browser chromium
 set $filemgr thunar
 
-bindsym $mod+Return exec foot
+bindsym $mod+Return exec ghostty
 bindsym $mod+q kill
 bindsym $mod+Shift+c reload
 bindsym $mod+d exec wofi -G --show run
