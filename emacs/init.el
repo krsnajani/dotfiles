@@ -8,28 +8,12 @@
 
 
 ;; Configs
-
-;(load-file "~/.config/emacs/kj-appearance.el") ;; Themes, fonts etc
-;(load-file "~/.config/emacs/kj-elfeed.el") ;; Themes, fonts etc
-;(load-file "~/.config/emacs/kj-denote.el") ;; The Denote Note Taking Package
 (load-file "~/.config/emacs/kj-org.el") ;; Org mode and text mode changes
-;(load-file "~/.config/emacs/miniflux.el") ;; Mail changes
 
-(server-start)
+
+;(server-start)
 (require 'org-protocol)
 
-(use-package vterm
-  :ensure t
- )
-
-
-(use-package pdf-tools
-  :ensure t
-  :defer t
-  :commands (pdf-loader-install)
-  :mode "\\.pdf\\'"
-  :init (pdf-tools-install)
-  :config (add-to-list 'revert-without-query ".pdf"))
 
 (use-package consult
   :ensure t
@@ -49,13 +33,10 @@
   (marginalia-mode +1))
 
 (use-package magit
-  :ensure t
-  ) 
-
-(use-package embark
-  :ensure t
+  :defer t
   :bind
-  ("C-." . 'embark-act))
+  ("C-x g" . 'magit)
+  ) 
 
 (setq-default line-spacing 0.15)
 
@@ -66,66 +47,20 @@
 (menu-bar-mode -1)
 (scroll-bar-mode -1)
 (recentf-mode)
-(visual-line-mode +1)
+(visual-line-mode -1)
 
-
-;; Installing Themes
-
-(use-package modus-themes
-  :ensure t
-  :config
-  (load-theme 'modus-vivendi t))
-
-;; Although modus themes are now default in Emacs, there are certain modus variants that are not part of the default package
-
-(use-package ef-themes
-  :ensure t
-  :config
- ;; (load-theme 'acme t)
-  (global-set-key (kbd "<f6>") 'modus-themes-toggle))
-  
-
-(use-package doom-themes
-  :ensure t)
-
-(use-package doom-modeline
-  :ensure
-  :config
-  (doom-modeline-mode 1)
-  (display-battery-mode 1))
-;; The lighting suits the theme so allows for frequent changes
-
+(load-theme 'modus-vivendi 1)
 
 ;; Simple font configuration
 (set-face-attribute 'default nil
 		    :font "SFMono Nerd Font Mono"
-		    :height 120)
+		    :height 140)
 (set-face-attribute 'variable-pitch nil
 		    :font "Liberation Sans"
-		    :height 120)
+		    :height 140)
 (set-face-attribute 'fixed-pitch nil
 		    :font "SFMono Nerd Font Mono"
-		    :height 130)
-
-;; Makes commented text and keywords italics.
-(set-face-attribute 'font-lock-comment-face nil
-		    :slant 'italic)
-(set-face-attribute 'font-lock-keyword-face nil
-		    :slant 'italic)
-
-(defun kj/toggle-theme ()
-  "Toggle the deeper-blue theme.
-
-URL `http://xahlee.info/emacs/emacs/elisp_xah-toggle-theme.html`
-Created: 2024-08-22
-Version: 2024-08-29"
-  (interactive)
-  (if custom-enabled-themes
-      (progn
-        (disable-theme 'deeper-blue)
-        (set-background-color "honeydew"))
-    (load-theme 'deeper-blue)))
-
+		    :height 140)
 
 
  (setq gc-cons-threshold most-positive-fixnum ; 2^61 bytes
@@ -148,39 +83,53 @@ Version: 2024-08-29"
  (add-hook 'minibuffer-setup #'config:defer-gc)
  (add-hook 'minibuffer-exit #'config:restore-gc)
 
+(use-package obsidian
+  :ensure t
+  :demand t
+  :config
+  (obsidian-specify-path "~/Syncrecies")
+  (global-obsidian-mode t)
+  :custom
+  ;; This directory will be used for `obsidian-capture' if set.
+  (obsidian-inbox-directory "__Inbox")
+  ;; Create missing files in inbox? - when clicking on a wiki link
+  ;; t: in inbox, nil: next to the file with the link
+  ;; default: t
+  ;(obsidian-wiki-link-create-file-in-inbox nil)
+  ;; The directory for daily notes (file name is YYYY-MM-DD.md)
+  (obsidian-daily-notes-directory "Daily Notes")
+  ;; Directory of note templates, unset (nil) by default
+  ;(obsidian-templates-directory "Templates")
+  ;; Daily Note template name - requires a template directory. Default: Daily Note Template.md
+  ;(obsidian-daily-note-template "Daily Note Template.md")
+  :bind (:map obsidian-mode-map
+  ;; Replace C-c C-o with Obsidian.el's implementation. It's ok to use another key binding.
+  ("C-c C-o" . obsidian-follow-link-at-point)
+  ;; Jump to backlinks
+  ("C-c C-b" . obsidian-backlink-jump)
+  ;; If you prefer you can use `obsidian-insert-link'
+  ("C-c C-l" . obsidian-insert-wikilink)))
+
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(browse-url-browser-function 'eww-browse-url)
  '(citar-bibliography '("~/docs/Library.bib"))
- '(ef-themes-to-toggle '(ef-autumn ef-day))
- '(elfeed-tube-mpv-options '("--cache=yes" "--force-window=yes" "--profile=720p"))
  '(evil-want-keybinding nil)
  '(make-backup-files nil)
- '(miniflux-server "http://umbrel:2520/v1")
- '(miniflux-token "GXx63OXAWWJx5K5WB1GcX-jxj2OnJCb8nVOXztz0g1Y=")
- '(org-agenda-files
-   '("/home/krishnaj/docs/org/capture.org"
-     "/home/krishnaj/docs/org/refile.org"
-     "/home/krishnaj/docs/org/schedule.org"))
- '(org-cite-csl-styles-dir "/home/krishnaj/Zotero/styles")
  '(org-cite-global-bibliography '("~/docs/Library.bib"))
  '(package-selected-packages
    '(all-the-icons all-the-icons-nerd-fonts citeproc citeproc-org
 		   consult-notes denote desktop-environment
 		   doom-modeline doom-themes ef-themes elfeed-goodies
 		   elfeed-org elfeed-tube embark embark-consult
-		   jazz-theme magit marginalia markdown-mode
-		   modus-themes olivetti org-caldav org-journal
-		   org-modern org-roam org-static-blog pdf-tools
-		   rainbow-mode subsonic sudo-edit vertico vterm
-		   weblorg))
- '(select-enable-clipboard t)
- '(smtpmail-smtp-server "posteo.de")
- '(smtpmail-smtp-service 587)
- '(subsonic-ssl nil))
+		   hemisu-theme jazz-theme magit marginalia
+		   markdown-mode modus-themes obsidian olivetti
+		   org-caldav org-journal org-modern org-roam
+		   org-static-blog pdf-tools rainbow-mode subsonic
+		   sudo-edit treesit-auto vertico vterm weblorg))
+ '(select-enable-clipboard t))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.

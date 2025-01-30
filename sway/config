@@ -2,7 +2,7 @@ set $mod Mod4
 
 default_border pixel 4
 floating_modifier $mod normal
-font pango:FantasqueSansM Nerd Font 15
+font pango:SFMono Nerd Font Mono 15
 set $opacity 1.0
 
 set $left h
@@ -12,7 +12,7 @@ set $right l
 set $browser chromium
 set $filemgr thunar
 
-bindsym $mod+Return exec ghostty
+bindsym $mod+Return exec foot
 bindsym $mod+q kill
 bindsym $mod+Shift+c reload
 bindsym $mod+d exec wofi -G --show run

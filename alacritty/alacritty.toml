@@ -1,0 +1,27 @@
+
+[cursor]
+style = "Block"
+
+[env]
+TERM = "alacritty"
+
+[font]
+size = 13
+
+[font.bold]
+family = "SFMono Nerd Font Mono"
+
+[font.italic]
+family = "SFMono Nerd Font Mono"
+
+[font.normal]
+family = "SFMono Nerd Font Mono"
+
+[window]
+decorations = "full"
+opacity = 0.9
+
+[window.padding]
+x = 15
+y = 15
+

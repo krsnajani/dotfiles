@@ -1,4 +1,4 @@
-@define-color background #0D0E1C;
+@define-color background #151515;
 @define-color foreground #ffffff;
 @define-color focused #b6a0ff;
 @define-color occupied #79a8ff;
@@ -7,7 +7,7 @@
 @define-color bluetooth #FEACD0;
 
 * {
-  font-family: FantasqueSansM Nerd Font;
+  font-family: SFMono Nerd Font Mono;
   font-size: 13pt;
   min-height: 0px;
 }
