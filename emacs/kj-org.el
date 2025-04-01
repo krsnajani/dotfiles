@@ -25,7 +25,7 @@
 			     (setq org-hide-emphasis-markers t)
 			     (org-modern-mode)
 			     (org-indent-mode)
-			     (variable-pitch-mode)
+			     ;(variable-pitch-mode)
 			     (my-org-faces)))
 
 (add-hook 'olivetti-mode-on-hook (lambda ()
@@ -43,6 +43,7 @@
   (setq org-directory "~/docs/org")
   (global-set-key (kbd "C-c a") 'org-agenda)
   (global-set-key (kbd "C-c c") 'org-capture)
+  (setq org-agenda-directory "~/docs/org")
   (setq org-capture-templates
 	'(("t" "Todo" entry (file+headline "~/docs/org/capture.org" "Tasks")
            "** TODO %?\n  %i\n  %a")

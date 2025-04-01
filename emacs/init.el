@@ -49,8 +49,28 @@
 (recentf-mode)
 (visual-line-mode -1)
 
-(load-theme 'modus-vivendi 1)
+(use-package spacious-padding
+  :ensure t
+  :config
+  (spacious-padding-mode 1))
 
+(load-theme 'modus-operandi 1)
+
+(defun my-configure-font (frame)
+  "Configure font given initial non-daemon FRAME.
+Intended for `after-make-frame-functions'."
+  (set-face-attribute 'default nil
+		      :font "SFMono Nerd Font Mono"
+		      :height 130)
+  (set-face-attribute 'variable-pitch nil
+		      :font "Liberation Sans"
+		      :height 140)
+  (set-face-attribute 'fixed-pitch nil
+		      :font "SFMono Nerd Font Mono"
+		      :height 140))
+;  (remove-hook 'after-make-frame-functions #'my-configure-font))
+
+(add-hook 'after-make-frame-functions #'my-configure-font)
 ;; Simple font configuration
 (set-face-attribute 'default nil
 		    :font "SFMono Nerd Font Mono"
@@ -61,7 +81,6 @@
 (set-face-attribute 'fixed-pitch nil
 		    :font "SFMono Nerd Font Mono"
 		    :height 140)
-
 
  (setq gc-cons-threshold most-positive-fixnum ; 2^61 bytes
        gc-cons-percentage 0.6)
@@ -83,32 +102,6 @@
  (add-hook 'minibuffer-setup #'config:defer-gc)
  (add-hook 'minibuffer-exit #'config:restore-gc)
 
-(use-package obsidian
-  :ensure t
-  :demand t
-  :config
-  (obsidian-specify-path "~/Syncrecies")
-  (global-obsidian-mode t)
-  :custom
-  ;; This directory will be used for `obsidian-capture' if set.
-  (obsidian-inbox-directory "__Inbox")
-  ;; Create missing files in inbox? - when clicking on a wiki link
-  ;; t: in inbox, nil: next to the file with the link
-  ;; default: t
-  ;(obsidian-wiki-link-create-file-in-inbox nil)
-  ;; The directory for daily notes (file name is YYYY-MM-DD.md)
-  (obsidian-daily-notes-directory "Daily Notes")
-  ;; Directory of note templates, unset (nil) by default
-  ;(obsidian-templates-directory "Templates")
-  ;; Daily Note template name - requires a template directory. Default: Daily Note Template.md
-  ;(obsidian-daily-note-template "Daily Note Template.md")
-  :bind (:map obsidian-mode-map
-  ;; Replace C-c C-o with Obsidian.el's implementation. It's ok to use another key binding.
-  ("C-c C-o" . obsidian-follow-link-at-point)
-  ;; Jump to backlinks
-  ("C-c C-b" . obsidian-backlink-jump)
-  ;; If you prefer you can use `obsidian-insert-link'
-  ("C-c C-l" . obsidian-insert-wikilink)))
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
@@ -118,17 +111,10 @@
  '(citar-bibliography '("~/docs/Library.bib"))
  '(evil-want-keybinding nil)
  '(make-backup-files nil)
+ '(org-agenda-files '("~/docs/org/schedule.org"))
  '(org-cite-global-bibliography '("~/docs/Library.bib"))
  '(package-selected-packages
-   '(all-the-icons all-the-icons-nerd-fonts citeproc citeproc-org
-		   consult-notes denote desktop-environment
-		   doom-modeline doom-themes ef-themes elfeed-goodies
-		   elfeed-org elfeed-tube embark embark-consult
-		   hemisu-theme jazz-theme magit marginalia
-		   markdown-mode modus-themes obsidian olivetti
-		   org-caldav org-journal org-modern org-roam
-		   org-static-blog pdf-tools rainbow-mode subsonic
-		   sudo-edit treesit-auto vertico vterm weblorg))
+   '(org-drill deft acme-theme ewal-doom-themes spacious-padding nano-agenda nanowrimo nano-theme all-the-icons all-the-icons-nerd-fonts citeproc citeproc-org consult-notes denote desktop-environment doom-modeline doom-themes ef-themes elfeed-goodies elfeed-org elfeed-tube embark embark-consult hemisu-theme jazz-theme magit marginalia markdown-mode modus-themes obsidian olivetti org-caldav org-journal org-modern org-roam org-static-blog pdf-tools rainbow-mode subsonic sudo-edit treesit-auto vertico vterm weblorg))
  '(select-enable-clipboard t))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.

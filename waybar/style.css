@@ -1,10 +1,12 @@
-@define-color background #151515;
-@define-color foreground #ffffff;
-@define-color focused #b6a0ff;
-@define-color occupied #79a8ff;
-@define-color empty #989898;
-@define-color urgent #ff5f59;
-@define-color bluetooth #FEACD0;
+@define-color focused #E1D3AC;
+@define-color occupied #312016;
+@define-color empty #8d8a7c;
+@define-color bluetooth #737F8A;
+@define-color urgent #D4A167;
+@define-color foreground #312016;
+@define-color background #fcfbf7;
+
+
 
 * {
   font-family: SFMono Nerd Font Mono;
@@ -33,6 +35,11 @@ window#waybar {
   text-shadow: none;
   background: transparent;
 }
+
+#workspaces button {
+  color: @empty;
+}
+
 
 #workspaces button.active {
   color: @occupied;

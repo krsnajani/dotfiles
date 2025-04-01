@@ -1,9 +1,9 @@
 set $mod Mod4
 
-default_border none
 floating_modifier $mod
+default_border normal
 
-font pango:UbuntuMono Nerd Font 13
+font pango: SFMono Nerd Font Mono 13
 
 set $left h
 set $down j
@@ -35,7 +35,6 @@ bindsym $mod+Shift+7 move container to workspace number 7
 bindsym $mod+Shift+8 move container to workspace number 8
 bindsym $mod+Shift+9 move container to workspace number 9
 bindsym $mod+Shift+0 move container to workspace number 10
-
 bindsym XF86MonBrightnessUp exec brightnessctl s 10%+
 bindsym XF86MonBrightnessDown exec brightnessctl s 10%-
 bindsym $mod+$left focus left
@@ -44,23 +43,26 @@ bindsym $mod+$up focus up
 bindsym $mod+$right focus right
 bindsym $mod+s floating toggle
 bindsym $mod+f fullscreen
-bindsym $mod+n exec --no-startup-id neovide
-for_window [class=".*"] border pixel 0
-exec_always --no-startup-id sh ~/.config/polybar/launch.sh
-
+bindsym $mod+w exec thorium-browser
+exec_always setxkbmap -option 'ctrl:nocaps'
+exec_always xset r rate 150 50
+exec_always picom
+exec_always nitrogen --restore
 gaps inner 5
 gaps outer 5
 
 
 bar {
 	status_command i3status
+	separator_symbol " | "
+	position top
 	colors {
-    		background #061B1A
+    		background #285577
     		statusline #FFFFFF
     		separator  #666666
-		focused_workspace  #000000 #061B1A #FFFFFF
-    		active_workspace   #333333 #222222 #FFFFFF
-    		inactive_workspace #333333 #222222 #888888
+		focused_workspace  #000000 #285577 #FFFFFF
+    		active_workspace   #FFFFFF #285577 #FFFFFF
+    		inactive_workspace #FFFFFF #000000 #FFFFFF
     		urgent_workspace   #2F343A #C40000 #FFFFFF
     		binding_mode       #2F343A #C90000 #FFFFFF
   }
