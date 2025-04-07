@@ -63,7 +63,7 @@ Intended for `after-make-frame-functions'."
 		      :font "SFMono Nerd Font Mono"
 		      :height 130)
   (set-face-attribute 'variable-pitch nil
-		      :font "Liberation Sans"
+		      :font "TrebuchetMS"
 		      :height 140)
   (set-face-attribute 'fixed-pitch nil
 		      :font "SFMono Nerd Font Mono"
