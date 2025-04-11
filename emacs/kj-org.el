@@ -70,3 +70,5 @@
          ("C-c n i" . org-roam-node-insert))
   :config
   (org-roam-setup))
+
+(setq org-latex-packages-alist '(("margin=2cm" "geometry" nil)))

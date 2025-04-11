@@ -63,7 +63,7 @@ Intended for `after-make-frame-functions'."
 		      :font "SFMono Nerd Font Mono"
 		      :height 130)
   (set-face-attribute 'variable-pitch nil
-		      :font "TrebuchetMS"
+		      :font "Schibsted Grotesk"
 		      :height 140)
   (set-face-attribute 'fixed-pitch nil
 		      :font "SFMono Nerd Font Mono"
@@ -76,7 +76,7 @@ Intended for `after-make-frame-functions'."
 		    :font "SFMono Nerd Font Mono"
 		    :height 140)
 (set-face-attribute 'variable-pitch nil
-		    :font "Liberation Sans"
+		    :font "Schibsted Grotesk"
 		    :height 140)
 (set-face-attribute 'fixed-pitch nil
 		    :font "SFMono Nerd Font Mono"
@@ -102,6 +102,15 @@ Intended for `after-make-frame-functions'."
  (add-hook 'minibuffer-setup #'config:defer-gc)
  (add-hook 'minibuffer-exit #'config:restore-gc)
 
+(setq ob-mermaid-cli-path "/sbin/mmdc")
+
+
+(org-babel-do-load-languages
+    'org-babel-load-languages
+    '((mermaid . t)
+      (scheme . t)))
+    
+
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
@@ -112,9 +121,27 @@ Intended for `after-make-frame-functions'."
  '(evil-want-keybinding nil)
  '(make-backup-files nil)
  '(org-agenda-files '("~/docs/org/schedule.org"))
- '(org-cite-global-bibliography '("~/docs/Library.bib"))
+ '(org-cite-global-bibliography '("~/docs/projects/Library.bib"))
+ '(org-file-apps
+   '((auto-mode . emacs) (directory . emacs) ("\\.mm\\'" . default)
+     ("\\.x?html?\\'" . default) ("\\.pdf\\'" . system)))
+ '(org-roam-capture-templates
+   '(("d" "default" plain "%?" :target
+      (file+head "%<%Y%m%d%H%M%S>-${slug}.org"
+		 "#+title: ${title} #+cite_export: csl /home/kjani/Zotero/styles/bluebook.csl\12")
+      :unnarrowed t)))
  '(package-selected-packages
-   '(org-drill deft acme-theme ewal-doom-themes spacious-padding nano-agenda nanowrimo nano-theme all-the-icons all-the-icons-nerd-fonts citeproc citeproc-org consult-notes denote desktop-environment doom-modeline doom-themes ef-themes elfeed-goodies elfeed-org elfeed-tube embark embark-consult hemisu-theme jazz-theme magit marginalia markdown-mode modus-themes obsidian olivetti org-caldav org-journal org-modern org-roam org-static-blog pdf-tools rainbow-mode subsonic sudo-edit treesit-auto vertico vterm weblorg))
+   '(acme-theme all-the-icons all-the-icons-nerd-fonts citeproc
+		citeproc-org consult-notes deft denote
+		desktop-environment doom-modeline doom-themes
+		ef-themes elfeed-goodies elfeed-org elfeed-tube embark
+		embark-consult ewal-doom-themes hemisu-theme
+		jazz-theme magit marginalia markdown-mode modus-themes
+		nano-agenda nano-theme nanowrimo ob-mermaid obsidian
+		olivetti org-caldav org-drill org-journal org-modern
+		org-pdftools org-roam org-static-blog pdf-tools
+		rainbow-mode spacious-padding subsonic sudo-edit
+		treesit-auto vertico vterm weblorg))
  '(select-enable-clipboard t))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
