@@ -25,7 +25,7 @@
 			     (setq org-hide-emphasis-markers t)
 			     (org-modern-mode)
 			     (org-indent-mode)
-			     ;(variable-pitch-mode)
+					;(variable-pitch-mode)
 			     (my-org-faces)))
 
 (add-hook 'olivetti-mode-on-hook (lambda ()
@@ -72,3 +72,4 @@
   (org-roam-setup))
 
 (setq org-latex-packages-alist '(("margin=2cm" "geometry" nil)))
+

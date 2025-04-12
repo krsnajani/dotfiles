@@ -11,6 +11,13 @@
 (load-file "~/.config/emacs/kj-org.el") ;; Org mode and text mode changes
 
 
+(setq send-mail-function 'smtpmail-send-it)
+(setq smtpmail-smtp-server "posteo.de")
+(setq smtpmail-smtp-service 587)
+(setq smtpmail-smtp-user "krishnajani@posteo.com")
+(setq smtpmail-servers-requiring-authorization "posteo.de")
+
+
 ;(server-start)
 (require 'org-protocol)
 
@@ -60,7 +67,7 @@
   "Configure font given initial non-daemon FRAME.
 Intended for `after-make-frame-functions'."
   (set-face-attribute 'default nil
-		      :font "SFMono Nerd Font Mono"
+		      :font "Schibsted Grotesk"
 		      :height 130)
   (set-face-attribute 'variable-pitch nil
 		      :font "Schibsted Grotesk"
@@ -73,7 +80,7 @@ Intended for `after-make-frame-functions'."
 (add-hook 'after-make-frame-functions #'my-configure-font)
 ;; Simple font configuration
 (set-face-attribute 'default nil
-		    :font "SFMono Nerd Font Mono"
+		    :font "Schibsted Grotesk"
 		    :height 140)
 (set-face-attribute 'variable-pitch nil
 		    :font "Schibsted Grotesk"
@@ -81,6 +88,12 @@ Intended for `after-make-frame-functions'."
 (set-face-attribute 'fixed-pitch nil
 		    :font "SFMono Nerd Font Mono"
 		    :height 140)
+
+(use-package dirvish
+  :ensure t
+  :config
+  (dirvish-override-dired-mode 1))
+
 
  (setq gc-cons-threshold most-positive-fixnum ; 2^61 bytes
        gc-cons-percentage 0.6)
@@ -133,7 +146,7 @@ Intended for `after-make-frame-functions'."
  '(package-selected-packages
    '(acme-theme all-the-icons all-the-icons-nerd-fonts citeproc
 		citeproc-org consult-notes deft denote
-		desktop-environment doom-modeline doom-themes
+		desktop-environment dirvish doom-modeline doom-themes
 		ef-themes elfeed-goodies elfeed-org elfeed-tube embark
 		embark-consult ewal-doom-themes hemisu-theme
 		jazz-theme magit marginalia markdown-mode modus-themes
