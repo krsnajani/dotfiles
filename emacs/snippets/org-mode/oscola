@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: citation
+# key: oscola
+# --
+#+cite_export: csl /home/kjani/Zotero/styles/oscola.csl

@@ -1,0 +1,8 @@
+# -*- mode: snippet -*-
+# name: normal template
+# key: temp_norm
+# --
+
+#+title:
+#+author: Krishna Jani
+cite<tab>

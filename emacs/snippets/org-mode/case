@@ -1,0 +1,14 @@
+# -*- mode: snippet -*-
+# name: case analysis
+# key: temp_case
+# --
+
+* Case :
+
+** Issues
+
+** Arguments
+
+** Court's Position
+
+** Analysis
