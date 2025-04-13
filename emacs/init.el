@@ -124,6 +124,13 @@ Intended for `after-make-frame-functions'."
       (scheme . t)))
     
 
+(use-package yasnippet
+  :ensure t
+  :config
+  (yas-global-mode 1)
+  (setq yas-snippet-dirs
+	'("~/.config/emacs/snippets")))
+
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
@@ -154,7 +161,7 @@ Intended for `after-make-frame-functions'."
 		olivetti org-caldav org-download org-drill org-journal
 		org-modern org-pdftools org-roam org-static-blog
 		pdf-tools rainbow-mode spacious-padding subsonic
-		sudo-edit treesit-auto vertico vterm weblorg))
+		sudo-edit treesit-auto vertico vterm weblorg yasnippet))
  '(select-enable-clipboard t))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
