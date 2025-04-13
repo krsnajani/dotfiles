@@ -73,3 +73,14 @@
 
 (setq org-latex-packages-alist '(("margin=2cm" "geometry" nil)))
 
+(use-package deft
+  :after org
+  :bind
+  ("C-c n d" . deft)
+  :custom
+  (deft-recursive t)
+  (deft-use-filter-string-for-filename t)
+  (deft-default-extension "org")
+  (deft-directory org-roam-directory))
+
+(global-set-key (kbd "C-x c") 'org-cite-insert)

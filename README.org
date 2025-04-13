@@ -1,6 +1,5 @@
 #+author: Krishna Jani
 
-[[./shot.png]]
 
 * ~/.dotfiles
 

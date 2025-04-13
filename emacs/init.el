@@ -61,13 +61,13 @@
   :config
   (spacious-padding-mode 1))
 
-(load-theme 'modus-operandi 1)
+(load-theme 'doom-vibrant 1)
 
 (defun my-configure-font (frame)
   "Configure font given initial non-daemon FRAME.
 Intended for `after-make-frame-functions'."
   (set-face-attribute 'default nil
-		      :font "Schibsted Grotesk"
+		      :font "RobotoMono Nerd Font"
 		      :height 130)
   (set-face-attribute 'variable-pitch nil
 		      :font "Schibsted Grotesk"
@@ -80,7 +80,7 @@ Intended for `after-make-frame-functions'."
 (add-hook 'after-make-frame-functions #'my-configure-font)
 ;; Simple font configuration
 (set-face-attribute 'default nil
-		    :font "Schibsted Grotesk"
+		    :font "RobotoMono Nerd Font"
 		    :height 140)
 (set-face-attribute 'variable-pitch nil
 		    :font "Schibsted Grotesk"
@@ -141,20 +141,20 @@ Intended for `after-make-frame-functions'."
  '(org-roam-capture-templates
    '(("d" "default" plain "%?" :target
       (file+head "%<%Y%m%d%H%M%S>-${slug}.org"
-		 "#+title: ${title} #+cite_export: csl /home/kjani/Zotero/styles/bluebook.csl\12")
+		 "#+title: ${title} #+cite_export: csl /home/kjani/Zotero/styles/oscola.csl\12")
       :unnarrowed t)))
  '(package-selected-packages
-   '(acme-theme all-the-icons all-the-icons-nerd-fonts citeproc
+   '(acme-theme all-the-icons all-the-icons-nerd-fonts auctex citeproc
 		citeproc-org consult-notes deft denote
 		desktop-environment dirvish doom-modeline doom-themes
 		ef-themes elfeed-goodies elfeed-org elfeed-tube embark
 		embark-consult ewal-doom-themes hemisu-theme
 		jazz-theme magit marginalia markdown-mode modus-themes
 		nano-agenda nano-theme nanowrimo ob-mermaid obsidian
-		olivetti org-caldav org-drill org-journal org-modern
-		org-pdftools org-roam org-static-blog pdf-tools
-		rainbow-mode spacious-padding subsonic sudo-edit
-		treesit-auto vertico vterm weblorg))
+		olivetti org-caldav org-download org-drill org-journal
+		org-modern org-pdftools org-roam org-static-blog
+		pdf-tools rainbow-mode spacious-padding subsonic
+		sudo-edit treesit-auto vertico vterm weblorg))
  '(select-enable-clipboard t))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
