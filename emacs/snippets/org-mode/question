@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: question
+# key: qa
+# --
+
+* QX :drill:noexport:
+** Answer

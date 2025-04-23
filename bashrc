@@ -21,7 +21,7 @@ alias wg="wordgrinder"
 export EDITOR="helix"
 alias e="$EDITOR"
 PS1='[\u@\h \W]\$ '
-#cat ~/.cache/wal/sequences
+cat ~/.cache/wal/sequences
 pfetch
 
 
