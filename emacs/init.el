@@ -176,9 +176,9 @@ Intended for `after-make-frame-functions'."
 		ob-mermaid ob-solidity obsidian olivetti org-caldav
 		org-download org-drill org-journal org-modern
 		org-pdftools org-roam org-static-blog pdf-tools
-		rainbow-mode spacious-padding subsonic sudo-edit
-		theme-magic treesit-auto vertico vterm weblorg
-		yasnippet))
+		powerline rainbow-mode spacious-padding subsonic
+		sudo-edit theme-magic treesit-auto typing-game vertico
+		vterm weblorg yasnippet))
  '(select-enable-clipboard t))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
