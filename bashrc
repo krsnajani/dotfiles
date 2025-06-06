@@ -9,19 +9,17 @@ alias ls='lsd'
 alias grep='grep --color=auto'
 alias umbrel='ssh umbrel@umbrel'
 export PATH="/home/kjani/.local/bin:$PATH"
-alias d="cd ~/docs/ && lf"
-alias c="cd ~/code/ && lf"
-alias p="cd ~/docs/projects && lf"
-alias r="cd ~/Seafile/Research\ Paper\ Library/ && lf"
+alias d="cd ~/Documents/ && lf"
+alias c="cd ~/Code/ && lf"
+alias p="cd ~/Docs/Projects && lf"
 alias bin="cd ~/.local/bin"
-alias sc="helix ~/sc.md"
 #alias vim="helix"
 alias wc="wc -w"
 alias wg="wordgrinder"
-export EDITOR="helix"
+export EDITOR="vim"
 alias e="$EDITOR"
 PS1='[\u@\h \W]\$ '
-cat ~/.cache/wal/sequences
+#cat ~/.cache/wal/sequences
 pfetch
 
 
@@ -37,5 +35,3 @@ function y() {
 alias lf="y"
 alias yazi="y"
 
-# Added by LM Studio CLI (lms)
-export PATH="$PATH:/home/kjani/.lmstudio/bin"

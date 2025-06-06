@@ -22,7 +22,7 @@
     "interval": 60
   },
   "network": {
-    "interface": "wlp0s20f3",
+    "interface": "wlan0",
     "format": "  : {essid} ",
     "format-disconnected": "󰖪 " 
   },
