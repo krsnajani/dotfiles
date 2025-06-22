@@ -8,10 +8,13 @@
 alias ls='lsd'
 alias grep='grep --color=auto'
 alias umbrel='ssh umbrel@umbrel'
-export PATH="/home/kjani/.local/bin:$PATH"
-alias d="cd ~/Documents/ && lf"
+export PATH="/home/kj/.local/bin:$PATH"
+export PATH="/home/kj/.cargo/bin:$PATH"
+export PATH="/home/kj/Code/zk/bin:$PATH"
+alias S="cd ~/Documents/Syntopicon && vim"
 alias c="cd ~/Code/ && lf"
-alias p="cd ~/Docs/Projects && lf"
+alias p="cd ~/Documents/Projects && lf"
+alias bib="vim ~/Documents/Library.bib"
 alias bin="cd ~/.local/bin"
 #alias vim="helix"
 alias wc="wc -w"
@@ -32,6 +35,6 @@ function y() {
 	rm -f -- "$tmp"
 }
 
-alias lf="y"
+#alias lf="y"
 alias yazi="y"
 
