@@ -22,6 +22,7 @@
 ;(server-start)
 (require 'org-protocol)
 
+(setq package-install-upgrade-built-in t)
 
 (use-package consult
   :ensure t
@@ -178,9 +179,9 @@ Intended for `after-make-frame-functions'."
 		org-roam org-static-blog ox-typst pandoc pdf-tools
 		powerline rainbow-mode simple-modeline
 		spacious-padding standard-dirs standard-themes
-		subsonic sudo-edit tao-theme theme-magic treesit-auto
-		typing-game typst-ts-mode vertico vterm weblorg
-		yasnippet))
+		subsonic sudo-edit tao-theme theme-magic transient
+		treesit-auto typing-game typst-ts-mode vertico vterm
+		weblorg yasnippet))
  '(select-enable-clipboard t))
     
 
