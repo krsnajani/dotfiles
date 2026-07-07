@@ -6,16 +6,19 @@ style = "Block"
 TERM = "alacritty"
 
 [font]
-size = 9
+size = 18
 
 [font.bold]
-family = "SFMono Nerd Font Mono"
+family = "Inconsolata Nerd Font"
+style = "Regular"
 
 [font.italic]
-family = "SFMono Nerd Font Mono"
+family = "Inconsolata Nerd Font"
+style = "Regular"
 
 [font.normal]
-family = "SFMono Nerd Font Mono"
+family = "Inconsolata Nerd Font"
+style = "Regular"
 
 [window]
 decorations = "full"
@@ -25,3 +28,5 @@ opacity = 0.9
 x = 15
 y = 15
 
+[colors.primary]
+background = "#000000"

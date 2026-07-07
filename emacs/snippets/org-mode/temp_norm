@@ -5,4 +5,6 @@
 
 #+title:
 #+author: Krishna Jani
-cite<tab>
+#+options: toc:nil
+#+latex_header: \setmainfont{Verdana}
+#+latex_header: \setlength{\parindent}{0pt}
