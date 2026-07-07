@@ -42,7 +42,7 @@
   (marginalia-mode +1))
 
 (use-package magit
-  :defer t
+  :ensure t
   :bind
   ("C-x g" . 'magit)
   ) 
@@ -165,23 +165,8 @@ Intended for `after-make-frame-functions'."
 		 "#+title: ${title} #+cite_export: csl /home/kjani/Zotero/styles/oscola.csl\12")
       :unnarrowed t)))
  '(package-selected-packages
-   '(acme-theme all-the-icons all-the-icons-nerd-fonts
-		apropospriate-theme auctex calfw calfw-org citar
-		citeproc citeproc-org consult-notes deft denote
-		desktop-environment dirvish doom-modeline doom-themes
-		doric-themes ef-themes elfeed-goodies elfeed-org
-		elfeed-tube embark embark-consult ewal-doom-themes fzf
-		hemisu-theme jazz-theme magit marginalia markdown-mode
-		modus-themes naga-theme nano-agenda nano-theme
-		nanowrimo notmuch ob-mermaid ob-solidity obsidian
-		olivetti org-caldav org-download org-drill
-		org-hyperscheduler org-journal org-modern org-pdftools
-		org-roam org-static-blog ox-typst pandoc pdf-tools
-		powerline rainbow-mode simple-modeline
-		spacious-padding standard-dirs standard-themes
-		subsonic sudo-edit tao-theme theme-magic transient
-		treesit-auto typing-game typst-ts-mode vertico vterm
-		weblorg yasnippet))
+   '(calfw-org consult magit marginalia olivetti org-modern org-roam
+	       vertico yasnippet))
  '(select-enable-clipboard t))
     
 
