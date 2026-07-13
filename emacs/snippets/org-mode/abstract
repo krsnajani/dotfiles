@@ -1,0 +1,9 @@
+# -*- mode: snippet -*-
+# name: abstract
+# key: abstract
+# --
+
+#+begin_export odt
+<text:p text:style-name="abstract">
+</text:p>
+#+end_export

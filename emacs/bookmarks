@@ -1,0 +1,17 @@
+;;;; Emacs Bookmark Format Version 1;;;; -*- coding: utf-8-emacs; mode: lisp-data -*-
+;;; This format is meant to be slightly human-readable;
+;;; nevertheless, you probably don't want to edit it.
+;;; -*- End Of Bookmark File Format Version Stamp -*-
+(("Org"
+ (filename . "~/Library/Mobile Documents/com~apple~CloudDocs/Org/")
+ (front-context-string . ".DS_Store\n  drwx")
+ (rear-context-string . "40 27 May 08:34 ")
+ (position . 248)
+ (last-modified 27158 25215 387518 0))
+("org-capture-last-stored"
+ (filename . "~/Documents/notes/20260525232835-comparability_analysis.org")
+ (front-context-string)
+ (rear-context-string . "yles/oscola.csl\n")
+ (position . 156)
+ (last-modified 27156 36311 498221 0))
+)
