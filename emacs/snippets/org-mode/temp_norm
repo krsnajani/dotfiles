@@ -6,5 +6,7 @@
 #+title:
 #+author: Krishna Jani
 #+options: toc:nil
-#+latex_header: \setmainfont{Verdana}
+#+latex_header: \setmainfont{Libertinus Serif}
 #+latex_header: \setlength{\parindent}{0pt}
+#+LATEX_HEADER: \linespread{1.15}
+#+LATEX_HEADER: \setlength{\parskip}{0.5\baselineskip}

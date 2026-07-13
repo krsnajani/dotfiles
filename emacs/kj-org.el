@@ -120,6 +120,7 @@
 
 
 (use-package obsidian
+  :ensure t
   :config
   (global-obsidian-mode t)
   (obsidian-backlinks-mode t)
@@ -146,4 +147,4 @@
               ;; Follow a backlink for the current file
               ("C-c C-b" . obsidian-backlink-jump)))
 
-
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;

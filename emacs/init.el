@@ -58,6 +58,12 @@
 (recentf-mode)
 (visual-line-mode -1)
 
+;; Notmuch
+
+(use-package notmuch
+  :ensure t
+  :bind
+  ("C-c m" . 'notmuch))
 
 
 (set-face-attribute 'mode-line nil :height 140) ;; Sets height to 14pt (140 tenths of a point)
@@ -134,8 +140,10 @@ Intended for `after-make-frame-functions'."
 ;(set-background-color "black")
 ;(set-foreground-color "white")
 
-
-(load-theme 'modus-operandi 1)
+(use-package acme-theme
+  :ensure t
+  :config
+  (load-theme 'acme 1))
 
     
 (custom-set-variables
@@ -143,12 +151,14 @@ Intended for `after-make-frame-functions'."
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(citar-bibliography '("~/Documents/Library.bib"))
+ '(citar-bibliography
+   '("/Users/krishnajani/Library/Mobile Documents/com~apple~CloudDocs/Documents/Library.bib"))
  '(custom-safe-themes
    '("850af01ee34a0d0a0b19ff7ef239bde103cbb87f31ce54d4cd6b17de45e632bb"
      default))
  '(evil-want-keybinding nil)
  '(inverse-video t)
+ '(line-spacing 0.3)
  '(make-backup-files nil)
  '(org-agenda-files
    '("~/Library/Mobile Documents/com~apple~CloudDocs/Org/scratchpad.org"))
@@ -165,8 +175,8 @@ Intended for `after-make-frame-functions'."
 		 "#+title: ${title} #+cite_export: csl /home/kjani/Zotero/styles/oscola.csl\12")
       :unnarrowed t)))
  '(package-selected-packages
-   '(calfw-org consult magit marginalia olivetti org-modern org-roam
-	       vertico yasnippet))
+   '(acme-theme calfw-org citar consult magit marginalia obsidian
+		olivetti org-modern org-roam vertico yasnippet))
  '(select-enable-clipboard t))
     
 
