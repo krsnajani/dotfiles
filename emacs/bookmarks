@@ -2,7 +2,13 @@
 ;;; This format is meant to be slightly human-readable;
 ;;; nevertheless, you probably don't want to edit it.
 ;;; -*- End Of Bookmark File Format Version Stamp -*-
-(("Org"
+(("dotfiles"
+ (filename . "~/Code/dotfiles/")
+ (front-context-string . ".DS_Store\n  drwx")
+ (rear-context-string . "44 Jul  7 15:49 ")
+ (position . 216)
+ (last-modified 27220 29254 781559 0))
+("Org"
  (filename . "~/Library/Mobile Documents/com~apple~CloudDocs/Org/")
  (front-context-string . ".DS_Store\n  drwx")
  (rear-context-string . "40 27 May 08:34 ")
