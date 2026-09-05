@@ -1,3 +1,4 @@
+;; -*- lexical-binding: t; -*-
 
 ;; UI Elements
 (tool-bar-mode -1)
@@ -26,7 +27,7 @@
 ;; Enable Abbrev Mode automatically when opening a LaTeX file
 (add-hook 'latex-mode-hook 'abbrev-mode)
 
-(with-eval-after-load 'latex-mode
+(with-eval-after-load 'latex
   ;; 1. INLINE EXPANSIONS (Abbrevs)
   ;; Type the shortcut followed by Space or Punctuation to expand
   (define-abbrev latex-mode-abbrev-table "tbf" "\\textbf{}")
@@ -107,8 +108,8 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(citar-bibliography '("/Users/krishnajani/Documents/Libib.bib"))
- '(package-selected-packages '(auctex citar edit-server magit vertico)))
+ '(citar-bibliography '("~/Documents/Libib.bib"))
+ '(package-selected-packages '(auctex citar consult edit-server magit vertico)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
