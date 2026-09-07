@@ -1,0 +1,72 @@
+# ==========================================
+# 1. APPS & LAUNCHERS ($mod = alt / Option)
+# ==========================================
+
+# $mod + Return -> Alacritty
+alt + shift - return : open -na "/Applications/Alacritty.app"
+
+# $mod + q -> Kill/close window
+alt - q : yabai -m window --close
+
+# $mod + d / $mod + Space -> choose launcher
+alt - d     : ~/.config/yabai/launcher.sh
+alt - space : ~/.config/yabai/launcher.sh
+alt + shift - q : pid=$(yabai -m query --windows --window | jq -r '.pid') && [ "$pid" != "null" ] && kill "$pid"
+# $mod + w -> Zen Browser
+alt + shift - w : open -a "Firefox" 2>/dev/null || open -a "Zen"
+
+# $mod + e -> Emacs
+alt - e : emacsclient -c 2>/dev/null || open -a "Emacs"
+
+# $mod + t -> File Manager (Home directory)
+alt - t : open ~
+
+# $mod + Shift + c -> Reload yabai & skhd
+shift + alt - c : yabai --restart-service; skhd --restart-service
+
+# ==========================================
+# 2. NAVIGATION (h, j, k, l)
+# ==========================================
+
+alt - h : yabai -m window --focus west
+alt - j : yabai -m window --focus south
+alt - k : yabai -m window --focus north
+alt - l : yabai -m window --focus east
+
+# ==========================================
+# 3. WORKSPACES (1 - 10)
+# ==========================================
+
+# Switch to workspace ($mod + 1..0)
+alt - 1 : yabai -m space --focus 1
+alt - 2 : yabai -m space --focus 2
+alt - 3 : yabai -m space --focus 3
+alt - 4 : yabai -m space --focus 4
+alt - 5 : yabai -m space --focus 5
+alt - 6 : yabai -m space --focus 6
+alt - 7 : yabai -m space --focus 7
+alt - 8 : yabai -m space --focus 8
+alt - 9 : yabai -m space --focus 9
+alt - 0 : yabai -m space --focus 10
+
+# Move container to workspace ($mod + Shift + 1..0)
+shift + alt - 1 : yabai -m window --space 1; yabai -m space --focus 1
+shift + alt - 2 : yabai -m window --space 2; yabai -m space --focus 2
+shift + alt - 3 : yabai -m window --space 3; yabai -m space --focus 3
+shift + alt - 4 : yabai -m window --space 4; yabai -m space --focus 4
+shift + alt - 5 : yabai -m window --space 5; yabai -m space --focus 5
+shift + alt - 6 : yabai -m window --space 6; yabai -m space --focus 6
+shift + alt - 7 : yabai -m window --space 7; yabai -m space --focus 7
+shift + alt - 8 : yabai -m window --space 8; yabai -m space --focus 8
+shift + alt - 9 : yabai -m window --space 9; yabai -m space --focus 9
+shift + alt - 0 : yabai -m window --space 10; yabai -m space --focus 10
+
+# ==========================================
+# 4. LAYOUT & SPLITS
+# ==========================================
+
+# $mod + s -> Toggle floating
+alt - s : yabai -m window --toggle float --grid 4:4:1:1:2:2
+
+# $mod + f -> Toggle fullscreen
+alt + shift - f : yabai -m window --toggle zoom-fullscreen
