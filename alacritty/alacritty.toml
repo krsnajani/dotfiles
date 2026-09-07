@@ -1,3 +1,8 @@
+[general]
+live_config_reload = false
+
+[scrolling]
+history = 5000
 
 [cursor]
 style = "Block"
@@ -9,20 +14,19 @@ TERM = "alacritty"
 size = 18
 
 [font.bold]
-family = "Inconsolata Nerd Font"
+family = "SF Mono"
 style = "Regular"
 
 [font.italic]
-family = "Inconsolata Nerd Font"
+family = "SF Mono"
 style = "Regular"
 
 [font.normal]
-family = "Inconsolata Nerd Font"
+family = "SF Mono"
 style = "Regular"
 
 [window]
-decorations = "full"
-opacity = 0.9
+decorations = "none"
 
 [window.padding]
 x = 15

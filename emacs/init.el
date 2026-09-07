@@ -1,9 +1,12 @@
 
 ;; UI Elements
 (tool-bar-mode -1)
-(menu-bar-mode -1)
+(menu-bar-mode 1)
 (scroll-bar-mode -1)
 
+;; Allow Emacs to resize frame pixel-by-pixel (Required for tiling window managers)
+(setq frame-resize-pixelwise t)
+(setq default-frame-alist '((undecorated . t)))
 ;;Package.el
 (require 'package)
 
@@ -24,9 +27,9 @@
 ;; Latex Keybinds
 
 ;; Enable Abbrev Mode automatically when opening a LaTeX file
-(add-hook 'latex-mode-hook 'abbrev-mode)
+(add-hook 'latex-hook 'abbrev-mode)
 
-(with-eval-after-load 'latex-mode
+(with-eval-after-load 'latex
   ;; 1. INLINE EXPANSIONS (Abbrevs)
   ;; Type the shortcut followed by Space or Punctuation to expand
   (define-abbrev latex-mode-abbrev-table "tbf" "\\textbf{}")
@@ -108,7 +111,7 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(citar-bibliography '("/Users/krishnajani/Documents/Libib.bib"))
- '(package-selected-packages '(auctex citar edit-server magit vertico)))
+ '(package-selected-packages '(auctex citar consult edit-server elpher magit vertico)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
